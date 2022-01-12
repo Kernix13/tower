@@ -15,11 +15,22 @@ I removed files that were part of the Underscores download but are not required 
 
 Check out the notes on `composer` at the bottom of `README_S.md` on composer. I may need to install composer as I make changes to my styles so that they are reflected in `style-rtl.css`.
 
-You can also check the [Underscores repo](https://github.com/Automattic/underscores.me) to see their files, or download a version from [their website](https://underscores.me/) t get a copy of those files.
+You can also check the [Underscores repo](https://github.com/Automattic/underscores.me) to see their files, or download a version from [their website](https://underscores.me/) to get a copy of those files.
 
 ## Template Files
 
-Pertinent notes here
+Notes on the various files:
+
+1. **`date.php`**: I included it but I have no intention of added links to the dates for my blog posts. It's not a blog based site and I will not be writing a ton of articles.
+1. **`comments.php`**: Same as for date.php - I will not have comments enabled for any of my posts so no need to actually call it.
+
+### Template files for child themes
+
+These are the templates that would be ideal for customization:
+
+1. `author.php`:
+1. `category.php`:
+1. `template-full-width.php`:
 
 ## Template-Parts Files
 
