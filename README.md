@@ -13,7 +13,9 @@ I removed files that were part of the Underscores download but are not required 
 - `composer.phar`: empty file
 - `package.json` and `package.lock.json`: not using node modules
 
-Check out the notes on `composer` at the bottom of `README_S.md`. I may need to install composer.
+Check out the notes on `composer` at the bottom of `README_S.md` on composer. I may need to install composer as I make changes to my styles so that they are reflected in `style-rtl.css`.
+
+You can also check the [Underscores repo](https://github.com/Automattic/underscores.me) to see their files, or download a version from [their website](https://underscores.me/) t get a copy of those files.
 
 ## Template Files
 
