@@ -16,6 +16,15 @@ Check out the notes on `composer` at the bottom of `README_S.md` on composer. I 
 
 You can also check the [Underscores repo](https://github.com/Automattic/underscores.me) to see their files, or download a version from [their website](https://underscores.me/) to get a copy of those files.
 
+I added back the following files:
+
+```
+LICENSE
+phpcs.xml.dist
+```
+
+I have no idea how to use `phpcs.xml.dist` and I assume **LICENSE** is important to have but it's legal babble to me.
+
 ## Template Files
 
 Notes on the various files:
