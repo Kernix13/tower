@@ -18,12 +18,8 @@ You can also check the [Underscores repo](https://github.com/Automattic/undersco
 
 I added back the following files:
 
-```
-LICENSE
-phpcs.xml.dist
-```
-
-I have no idea how to use `phpcs.xml.dist` and I assume **LICENSE** is important to have but it's legal babble to me.
+- `LICENSE`: I assume this is important to have but it's legal babble to me.
+- `phpcs.xml.dist`: I have no idea how to use this file.
 
 ## Template Files
 
