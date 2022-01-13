@@ -7,10 +7,9 @@ This is the theme I built for my website [Kernix Web Design](https://kernixwebde
 I removed files that were part of the Underscores download but are not required for my theme to run. They are throwing errors in my GitHub repo because of the dependencies. Here is what I removed
 
 - `.eslintrc`: extends `plugin:@wordpress/eslint-plugin/esnext`
-- `gitignore`: No need for this right now since I deleted `node_modules` ans `package.json`.
 - `.stylelintrc.json`: not worth covering the few things in this file
 - `composer.json`: I may need this back becuse I used a command to create the `style-rtl.css` file.
-- `composer.phar`: empty file
+- `composer.phar`: empty file. I think this was created when I ran `git init` and I had `package.json`.
 - `package.json` and `package.lock.json`: not using node modules
 
 Check out the notes on `composer` at the bottom of `README_S.md` on composer. I may need to install composer as I make changes to my styles so that they are reflected in `style-rtl.css`.
