@@ -272,6 +272,9 @@ function specific_no_wpautop ( $content ) {
 
 add_filter ( 'the_content', 'specific_no_wpautop', 9 );
 
+// Enable the use of Shortcodes
+add_filter( 'widget_text', 'do_shortcode' );
+
 /**
  * Registers an editor stylesheet for the theme.
  */
@@ -280,7 +283,7 @@ function tower_theme_add_editor_styles() {
 }
 add_action( 'admin_init', 'tower_theme_add_editor_styles' );
 
-// breadcrumbs (where did i get this), NEED if child page
+// Breadcrumbs, need an if statement for child pages
 function get_breadcrumb() {
 	echo '<a href="' . esc_url( home_url() ) . '" rel="nofollow">Home</a>';
 	// echo '<a href="' . home_url( '/blog/' ) . '" rel="nofollow">Home</a>';
@@ -329,7 +332,7 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
-// inline google analytics script via wp_print_scripts
+// Inline google analytics script via wp_print_scripts
 function tower_google_print_scripts() { 
 	
 	?>
@@ -348,5 +351,16 @@ function tower_google_print_scripts() {
 }
 add_action('wp_print_scripts', 'tower_google_print_scripts');
 
-// to hide max-image-preview:large directive to the robots meta tag
-remove_filter('wp_robots', 'wp_robots_max_image_preview_large');
+// Hide max-image-preview:large directive to the robots meta tag
+// remove_filter('wp_robots', 'wp_robots_max_image_preview_large');
+
+// DISABLE EMBEDS (videos, images, tweets, audio, etc)
+add_action('wp-footer', function(){
+	wp_dequeue_script( 'wp-embed' );
+});
+
+// REMOVE BLOCK LIBRARY CSS
+add_action('wp_enqueue_scripts', function(){
+	wp_dequeue_style( 'wp-block-library' );
+	wp_dequeue_script( 'comment-reply' );
+});

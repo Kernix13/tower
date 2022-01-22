@@ -9,14 +9,11 @@
   --footer-clr2: #c39f76;
   --footer-bg-clr: #2a2e3a;
   --link-clr: rgb(58, 33, 199);
-  /* --link-hover-clr: #20b2aa; */
   --link-hover-clr: #c39f76;
   --link-hover-clr2: #bd8340;
-  /* --link-hover-clr2: #985514; */
-  /* --btn-clr: rgb(82, 82, 255); */
-  --btn-clr: rgb(160, 11, 6);
-  /* --btn-hover-clr: #20b2aa; */
-  --btn-hover-clr: green;
+  --btn-clr: rgb(82, 82, 255);
+  --btn-hover-clr: #20b2aa;
+  --btn-hover-clr: #ffffff;
 }
 
 html {
@@ -766,7 +763,7 @@ hr.resume {
 .contact-header {
   width: 93%;
   margin: 2em auto;
-  padding: 0 1em;
+  padding: 0;
   border-left: 0.25em solid rgba(58, 58, 134, 0.75);
 }
 
@@ -810,23 +807,31 @@ hr.resume {
 .btn,
 .svcs-btn {
   display: inline-block;
+  // display: block;
   cursor: pointer;
   border-radius: 0.5em;
   overflow: hidden;
   text-decoration: none;
   color: var(--common-clr);
   font-size: 0.9rem;
-  padding: 0.5em 1em;
+  font-weight: bold;
+  padding: 0.75em 1.5em;
   border: none;
   outline: none;
-  margin-bottom: 2em;
+  margin-top: 1em;
+  border: 1px solid #ffffff;
+}
+
+.btn:hover,
+.svcs-btn:hover {
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .svcs-btn {
   width: 10em;
   text-align: center;
   margin: 1.75em auto 0.25em;
-  border: 1px solid #ffffff;
 }
 
 .btn-other {
@@ -835,11 +840,14 @@ hr.resume {
 
 .btn--blue {
   background-color: var(--btn-clr);
+  font-weight: bold;
 }
 
 .btn--blue:hover {
-  color: var(--dark-clr);
-  background-color: rgb(20, 167, 105);
+  color: var(--btn-clr);
+  font-weight: bold;
+  background-color: #ffffff;
+  border: 1px solid var(--btn-clr);
   transition: color 250ms;
   transition: background-color 500ms;
 }
@@ -851,10 +859,15 @@ hr.resume {
   font-size: 1.25rem;
   font-weight: bold;
 }
+
 .btn--home:hover {
   background-color: #fff;
   color: #000;
   border: 2px solid #000;
+}
+
+.center {
+  text-align: center;
 }
 /* =========== END GENERAL-CSS =============== */
 
@@ -1087,11 +1100,13 @@ hr.resume {
   /* background-color: #e0f3ff; */
   /* background-color: var(--content-bg-clr); */
   color: #333;
+  padding: 2.5em 0;
 }
 
 .bgcolor1 p:last-child {
   margin-block-start: 0;
   margin-block-end: 0;
+  padding: 2.5em 0;
 }
 
 .bgcolor2,
@@ -1102,12 +1117,14 @@ hr.resume {
     rgb(42, 148, 42)
   );
   color: var(--common-clr);
+  padding: 2.5em 0;
 }
 
 .bgcolor6 {
   margin: 0 auto;
   padding: 1.5em 0;
   text-align: center;
+  padding: 2.5em 0;
 }
 
 .bgcolor3 {
@@ -1118,21 +1135,27 @@ hr.resume {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 1.5em 0 2.5em;
 }
 
 .bgcolor4 {
-  /* background-color: var(--content-bg-clr); */
+  background-color: var(--content-bg-clr);
   color: #333;
+  padding: 2.5em 0 3em;
 }
 
 .bgcolor5 {
   margin: 0 auto;
   text-align: center;
+  padding: 2.5em 0;
+  background-color: #f3f5f7;
+  // border-bottom: 1px solid #888;
 }
 
 .bgcolor7 {
   /* background-color: #ebf6fd; */
   color: #333;
+  padding: 0 0 3.5em;
 }
 
 .bgcolor8 {
@@ -1142,6 +1165,7 @@ hr.resume {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 2.5em 0;
 }
 
 .bgcontact {
@@ -1176,6 +1200,9 @@ hr.resume {
 
 .three-col-grid {
   padding: 2em 0;
+  // just added these last 2
+  max-width: 650px;
+  margin: 0 auto;
 }
 
 .two-col-flex,
@@ -1614,6 +1641,7 @@ span.inline {
 .contact-title {
   margin-bottom: 0.5em;
   padding: 0;
+  padding-left: 0.5em;
 }
 
 .contact-title-404 {
@@ -1641,6 +1669,7 @@ span.inline {
 
 .responsive-title {
   padding: 0 0 1em;
+  text-align: left;
 }
 
 .responsive-text,
@@ -1663,6 +1692,14 @@ span.inline {
   color: var(--common-clr);
 }
 
+.services-intro-title {
+  font-size: 2.5em;
+}
+
+.service-title {
+  margin-top: 1.5em;
+}
+
 .single-col-content,
 .intro-title,
 .services-intro-title,
@@ -1681,7 +1718,8 @@ span.inline {
   padding-bottom: 2em;
 }
 
-.common-text-box {
+.common-text-box,
+.services-points {
   background-color: rgba(255, 255, 255, 0.9);
   margin: 1em;
   padding: 1em;
@@ -1689,14 +1727,26 @@ span.inline {
   color: #222;
 }
 
+.services-points {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.services-points > * {
+  flex-basis: 100%;
+}
+
 .contact-content {
   text-align: left;
   margin-bottom: 2em;
 }
 
-.last-svc p::after {
-  display: none;
-}
+// .last-svc p::after {
+//   display: none;
+// }
 
 .single-col-left {
   text-align: left;
@@ -2186,15 +2236,30 @@ span.inline {
     margin: 2em auto 1em;
   }
 
-  .bgcolor6 {
-    padding: 2.5em 0;
+  .bgcolor1,
+  .bgcolor5,
+  .bgcolor6,
+  .bgcolor8 {
+    padding: 5em 0;
+  }
+
+  .bgcolor2 {
+    padding: 3em 0;
+  }
+
+  .bgcolor3 {
+    padding: 3em 0 5em;
+  }
+
+  .bgcolor5 {
+    padding: 3em 0 0;
   }
 
   .resume-page {
     padding: 2em;
   }
   .resume-column {
-    max-width: 1200px;
+    max-width: 1100px;
   }
 }
 
@@ -2262,7 +2327,7 @@ span.inline {
   .employment-gap {
     /* width: 85%; */
     width: 90%;
-    max-width: 1200px;
+    max-width: 1100px;
   }
 
   .resume-page {
@@ -2291,8 +2356,16 @@ span.inline {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
     grid-gap: 0.25em;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
+    height: 100%;
+  }
+
+  .services-col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    height: 100%;
   }
 
   .contact-content {
@@ -2320,7 +2393,7 @@ span.inline {
   .two-col-flex {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
   }
 
   /* .two-col-flex > * {
@@ -2341,6 +2414,7 @@ span.inline {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    padding-bottom: 2em;
   }
 
   .contact-flex {
