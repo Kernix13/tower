@@ -364,3 +364,15 @@ add_action('wp_enqueue_scripts', function(){
 	wp_dequeue_style( 'wp-block-library' );
 	wp_dequeue_script( 'comment-reply' );
 });
+
+// Deregister jQuery, replace with new version
+add_filter( 'wp_enqueue_scripts', 'replace_default_jquery_with_fallback');
+function replace_default_jquery_with_fallback() {
+    $ver = '1.12.4';
+    wp_dequeue_script( 'jquery' );
+    wp_deregister_script( 'jquery' );
+    // Set last parameter to 'true' if you want to load it in footer
+    wp_register_script( 'jquery', "//ajax.googleapis.com/ajax/libs/jquery/$ver/jquery.min.js", '', $ver, true );
+    wp_add_inline_script( 'jquery', 'window.jQuery||document.write(\'<script src="'.includes_url( '/js/jquery/jquery.js' ).'"><\/script>\')' );
+    wp_enqueue_script ( 'jquery' );
+}
