@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying 404 pages (not found)
+ * The template for displaying 404 page
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
@@ -27,7 +27,7 @@ get_header( 'post');
 				</div>
   </section>
 			</div><!-- .front-content -->
-		</article><!-- #post-<?php the_ID(); ?> -->
+		</article><!-- #post -->
 
 	</main><!-- #main -->
 
