@@ -51,3 +51,5 @@ Pertinent notes here
 ## JS Folder Files
 
 Pertinent notes here
+
+> Testing `git clone` on my new laptop
