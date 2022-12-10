@@ -109,9 +109,12 @@ li {
 
 blockquote {
   color: #555;
+  background-color: #f1f5f9;
+  font-size: 1.375rem;
+  font-weight: 400;
   margin: 0 1.5em;
   padding: 0 1em;
-  border-left: 2px solid #252933;
+  border-left: 3px solid #252933;
   font-style: italic;
 }
 
@@ -124,6 +127,37 @@ blockquote:after {
 
 table {
   background: #ccc;
+  margin: 2em auto;
+}
+
+thead th {
+  background: #252933;
+  font-weight: bold;
+  padding: 0.625em;
+}
+
+th {
+  color: white;
+  font-weight: bold;
+  padding: 0.625em;
+  text-align: center;
+}
+
+
+td {
+  padding: 0.5em;
+  font-size: 0.9rem;
+}
+
+table td {
+  padding: 0.5em;
+}
+
+table tr:nth-of-type(odd) {
+  background: #ddd;
+}
+table tr:nth-of-type(even) {
+  background: #fff;
 }
 
 address {
@@ -151,6 +185,14 @@ div.highlight {
 
 span.text-bold {
   font-weight: bold;
+}
+
+span.text-italic {
+  font-style: italic;
+}
+
+span.text-underlined {
+  text-decoration: underline;
 }
 
 a {
@@ -337,12 +379,23 @@ address {
 pre.code {
   background-color: #2c3e50;
 }
+
 pre.noncode {
   background-color: #ddd;
+  color: #000;
+}
+
+.inline-code {
+  display: inline-block;
+  padding: 0 0.0625em;
+  border-radius: 0.25em;;
+  background-color: #ddd;
+  color: #000;
 }
 
 pre {
   display: block;
+  font-size: 1rem;
   font-family: 'Courier New', Courier, monospace;
   line-height: 1.6;
   counter-reset: line;
@@ -1263,7 +1316,7 @@ hr.resume {
   background-color: #d8d2c5;
   text-align: left;
   margin: 1em 0.75em;
-  padding: 0 1em 1em;
+  padding: 1em;
   border-radius: 0.5em;
 }
 
@@ -1905,7 +1958,7 @@ span.inline {
   width: 44px;
   height: 44px;
   bottom: 10px;
-  right: 10px;
+  left: 10px;
   font-weight: bolder;
   border: none;
   outline: none;
@@ -1915,9 +1968,10 @@ span.inline {
   padding: 0.25em 0.5em;
   /* border-radius: 50%; */
   border-radius: 0.25em;
-  transition-duration: 0.2s;
+  transition-duration: 100ms;
   transition-timing-function: ease-in-out;
   transition-property: background-color, color;
+  z-index: 999;
 }
 
 #back-to-top-btn:hover,
@@ -1963,15 +2017,15 @@ span.inline {
 }
 
 /* ======== MEDIA QUERIES ====== */
-@media (min-width: 30em) {
-  #back-to-top-btn {
-    font-size: 1.5rem;
-    width: 50px;
-    height: 50px;
-    bottom: 20px;
-    right: 20px;
-  }
-}
+// @media (min-width: 30em) {
+//   #back-to-top-btn {
+//     font-size: 1.5rem;
+//     width: 50px;
+//     height: 50px;
+//     bottom: 20px;
+//     right: 20px;
+//   }
+// }
 
 @media (min-width: 48em) {
   .widget h3 {

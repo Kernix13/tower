@@ -171,12 +171,12 @@ add_action( 'widgets_init', 'tower_widgets_init' );
  */
 function tower_scripts() {
 	// comment OUT the one below for local dev -> for live site
-	// wp_enqueue_style( 'tower-style', get_template_directory_uri() . '/css/style.css', array(), TOWER_VERSION );
+	wp_enqueue_style( 'tower-style', get_template_directory_uri() . '/css/style.css', array(), TOWER_VERSION );
 	wp_style_add_data( 'tower-style', 'rtl', 'replace' );
 	wp_enqueue_style( 'tower-style', get_template_directory_uri() . 'woocommerce.css', array(), TOWER_VERSION );
 
 	// UN-comment the one below for local dev
-	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/css/style.css', [], time(), 'all' );
+	// wp_enqueue_style( 'main-style', get_template_directory_uri() . '/css/style.css', [], time(), 'all' );
 
 	wp_enqueue_script( 'tower-customizer', get_template_directory_uri() . '/js/customizer.js', array(), TOWER_VERSION, true );
 	wp_enqueue_script( 'tower-menutoggle', get_template_directory_uri() . '/js/menutoggle.js', array(), TOWER_VERSION, true );
@@ -283,7 +283,7 @@ function tower_theme_add_editor_styles() {
 }
 add_action( 'admin_init', 'tower_theme_add_editor_styles' );
 
-// Breadcrumbs, need an if statement for child pages
+// breadcrumbs (where did i get this), NEED if child page
 function get_breadcrumb() {
 	echo '<a href="' . esc_url( home_url() ) . '" rel="nofollow">Home</a>';
 	// echo '<a href="' . home_url( '/blog/' ) . '" rel="nofollow">Home</a>';
@@ -332,7 +332,7 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
-// Inline google analytics script via wp_print_scripts
+// inline google analytics script via wp_print_scripts
 function tower_google_print_scripts() { 
 	
 	?>
@@ -351,7 +351,7 @@ function tower_google_print_scripts() {
 }
 add_action('wp_print_scripts', 'tower_google_print_scripts');
 
-// Hide max-image-preview:large directive to the robots meta tag
+// to hide max-image-preview:large directive to the robots meta tag
 // remove_filter('wp_robots', 'wp_robots_max_image_preview_large');
 
 // DISABLE EMBEDS (videos, images, tweets, audio, etc)

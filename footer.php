@@ -56,7 +56,7 @@
 					);
 				?>
 
-				<span><?php esc_html_e('Desgin and WordPress theme by ', 'tower') ?></span>
+				<span><?php esc_html_e('Design and WordPress theme by ', 'tower') ?></span>
 				<?php
 				$my_theme = wp_get_theme(); ?>
 
