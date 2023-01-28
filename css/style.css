@@ -14,6 +14,18 @@
   --btn-clr: rgb(82, 82, 255);
   --btn-hover-clr: #20b2aa;
   --btn-hover-clr: #ffffff;
+
+  /* DARK code block variables */
+  --white: hsl(0, 0%, 100%);
+  --bg-dark_block: hsl(210, 19%, 8%);
+  --light-text: hsl(210, 40%, 96%);
+  --light-blue: hsl(199, 95%, 85%);
+  --blue: hsl(199, 100%, 65%);
+  --green: hsl(93, 86%, 51%);
+  --comment: hsl(0, 0%, 67%);
+  --red: hsl(0, 97%, 75%);
+  --purple: hsl(283, 100%, 85%);
+  --orange: hsl(41, 98%, 57%);
 }
 
 html {
@@ -258,7 +270,8 @@ hr {
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
- */
+
+*/
 pre {
   font-family: 'Courier New', Courier, monospace;
   font-size: 0.875em;
@@ -374,118 +387,118 @@ address {
   margin: 0 0 1.5em;
 }
 
-/* PRE TAG STYLING */
-
-pre.code {
-  background-color: #2c3e50;
-}
-
-pre.noncode {
-  background-color: #ddd;
-  color: #000;
-}
-
-.inline-code {
-  display: inline-block;
-  padding: 0 0.0625em;
-  border-radius: 0.25em;;
-  background-color: #ddd;
-  color: #000;
-}
-
-pre {
-  display: block;
-  font-size: 1rem;
-  font-family: 'Courier New', Courier, monospace;
-  line-height: 1.6;
-  counter-reset: line;
-  overflow: auto;
-  padding: 1em 0;
-  /* width: 70%; */
-  max-width: 1100px;
-  margin: 1em auto;
-  border-radius: 0.5em;
-}
-
-pre span {
-  display: inline-block;
-}
-
-pre span.css {
-  color: rgba(155, 220, 100, 1);
-}
-pre span.javascript {
-  color: rgb(255, 166, 0);
-}
-pre span.html {
-  color: rgb(199, 199, 199);
-  color: rgb(140, 203, 233);
-  color: rgb(231, 223, 108);
-  /* color: rgb(133, 60, 133); */
-}
-pre span.php {
-  color: #fff;
-}
-
-pre span.code {
-  color: #000;
-}
-pre span.empty {
-  content: '';
-}
-
-pre span::before {
-  width: 2.5em;
-  content: counter(line);
-  counter-increment: line;
-  display: inline-block;
-  border-right: 1px solid rgba(136, 136, 136, 0.5);
-  padding: 0 0.5em;
-  margin-right: 1em;
-  color: #fff;
-}
-
-pre span.code::before {
-  color: #333;
-}
-/* new code */
-p.code-block {
-  background-color: #ddd;
-  color: #333;
-  display: block;
-  font-family: 'Courier New', Courier, monospace;
-  line-height: 1.6;
-  /* overflow: auto; */
-  padding: 1.5em;
-  /* width: 70%; */
-  max-width: 800px;
-  margin: 2em auto;
-  border-radius: 0.5em;
+/* BEGIN PRE  CODE KBD AND VAR TAG STYLING */
+kbd,
+samp,
+var {
+  // font-family: "Lucida Console", Monaco, monospace;
+  font-family: "Lucida Console", 'Courier New', Courier, Monaco, monospace;
+  font-weight: 600;
 }
 
 code {
-  display: block;
-  background-color: #ddd;
-  color: #333;
-  display: block;
-  font-family: 'Courier New', Courier, monospace;
-  line-height: 1.6;
-  /* overflow: auto; */
-  padding: 1.5em;
-  /* width: 70%; */
-  max-width: 800px;
-  margin: 2em auto;
-  border-radius: 0.5em;
-}
-/* end new code */
-code,
-kbd,
-tt,
-var {
-  font-family: 'Courier New', Courier, monospace;
+  // font-family: "Lucida Console", Monaco, monospace;
+  // font-family: 'Courier New', Courier, monospace;
+  font-family: "Lucida Console", 'Courier New', Courier, Monaco, monospace;
+  font-size: 90%;
+  line-height: 1.5;
+  padding: 0.1875em 0.25em 0.0625em;
+  border-radius: 0.3em;
+  // tab-size: 4;
+  // text-align: left;
+  // box-shadow: black 1px 1px 0.3em -0.1em inset;
 }
 
-/* REMEMBER TO USE HTML ENTITIES FOR '<' AND '>' AND MAYBE OTHERS */
+p > code {
+  background-color: var(--bg-dark_block);
+  color: var(--white);
+}
+
+var {
+  font-size: 87.5%;
+  font-style: oblique;
+  // font-style: italic;
+}
+
+pre {
+  // font-family: 'Courier New', Courier, monospace;
+  // font-family: "Lucida Console", Monaco, monospace;
+  font-family: "Lucida Console", 'Courier New', Courier, Monaco, monospace;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.pre-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+kbd {
+  display: inline-block;
+  font-size: 87.5%;
+  line-height: 1;
+
+  background-color: #e1ebf5; // #d9edfe;
+  color: #555;
+
+  padding: 0.0625em 0.1875em;
+  border: 1px solid #888;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+}
+
+/* DARK and LIGHT code blocks */
+.code-block {
+  /* Why do I need a padding-top? The line-height? */
+  padding-top: 1.5em;
+  line-height: 1.5;
+  overflow: auto;
+  // overflow: scroll;
+  // overflow-x: auto;
+  // white-space: pre-wrap;
+}
+
+/* DARK code block */
+.dark_block {
+  background-color: var(--bg-dark_block);
+  color: var(--white);
+}
+
+/* DARK code block language colors */
+.light-blue {
+  color: var(--light-blue);
+}
+
+.blue,
+.boolean {
+  color: var(--blue);
+}
+
+.green {
+  color: var(--green);
+}
+
+.comment {
+  color: var(--comment);
+}
+
+.white {
+  color: var(--white);
+}
+
+.red {
+  color: var(--red);
+}
+
+.purple {
+  color: var(--purple);
+}
+
+.orange {
+  color: var(--orange);
+}
+
+/* END PRE  CODE KBD AND VAR TAG STYLING */
 
 abbr,
 acronym {

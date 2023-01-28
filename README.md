@@ -53,3 +53,30 @@ Pertinent notes here
 Pertinent notes here
 
 > Testing `git clone` on my new laptop 12/10/2022
+
+```html
+<div class="pre-container">
+  <pre class="code-block dark_block">
+        <code data-line="1">&lt;<span class="green">?php</span></code>
+        <code data-line="2"></code>
+        <code
+          data-line="3"> $query <span class="blue"></span>= <span class="red">new</span> <span class="purple">WP_Query</span>( [</code>
+          <code
+            data-line="4"> <span class="light-blue">&apos;post__not_in&apos;</span> <span class="blue"></span>=&gt; <span class="purple">get_option</span>( <span class="light-blue">&apos;sticky_posts&apos;</span>),</code>
+          <code
+            data-line="5"> <span class="light-blue">&apos;post_type&apos;</span> <span class="blue"></span>=&gt; <span class="light-blue">&apos;post&apos;</span>,</code>
+          <code
+            data-line="6"> <span class="light-blue">&apos;post_status&apos;</span> <span class="blue"></span>=&gt; <span class="light-blue">&apos;publish&apos;</span>,</code>
+          <code
+            data-line="7"> <span class="light-blue">&apos;category_name&apos;</span> <span class="blue"></span>=&gt; <span class="light-blue">&apos;code&apos;</span>,</code>
+          <code
+            data-line="8"> <span class="light-blue">&apos;posts_per_page&apos;</span> <span class="blue"></span>=&gt; 3,</code>
+        <code data-line="9"> ] );</code>
+        <code data-line="10"></code>
+        <code data-line="11"> <span class="red">if</span> ($query-&gt;<span class="purple">have_posts</span>())<span class="orange"></span> {</code>
+          <code
+            data-line="12"> <span class="red">while</span> ($query-&gt;<span class="purple">have_posts</span>())<span class="orange"></span> {</code>
+            <code data-line="13"> $query-&gt;<span class="purple">the_post</span>(); <span class="green">?</span>&gt;</code>
+      </pre>
+</div>
+```
