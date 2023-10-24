@@ -18,7 +18,7 @@ Basic lightweight theme geared towards speed and security. This theme is built u
 
 == Copyright ==
 
-Tower WordPress Theme, Copyright 2020 kernixwebdesign.com
+Tower WordPress Theme, Copyright 2020 Kernix Web Design
 Tower is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
