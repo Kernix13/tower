@@ -1,13 +1,13 @@
 <?php
 /**
- * The template for displaying 404 page
+ * The template for displaying 404 pages (not found)
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
  * @package Tower
  */
 
-get_header( 'post');
+get_header( 'custom');
 ?>
 
 	<main id="primary" class="site-main">
@@ -27,7 +27,7 @@ get_header( 'post');
 				</div>
   </section>
 			</div><!-- .front-content -->
-		</article><!-- #post -->
+		</article><!-- #post-<?php the_ID(); ?> -->
 
 	</main><!-- #main -->
 

@@ -169,15 +169,33 @@ add_action( 'widgets_init', 'tower_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function tower_scripts() {
-	// comment OUT the one below for local dev -> for live site
-	wp_enqueue_style( 'tower-style', get_template_directory_uri() . '/css/style.css', array(), TOWER_VERSION );
+function tower_styles() {
+
+	/* THEME STYLESHEETS */
+	// comment OUT the one below for local dev -> used for live site
+	// wp_enqueue_style( 'tower-style', get_template_directory_uri() . '/css/style.css', array(), TOWER_VERSION );
 	wp_style_add_data( 'tower-style', 'rtl', 'replace' );
 	wp_enqueue_style( 'tower-style', get_template_directory_uri() . 'woocommerce.css', array(), TOWER_VERSION );
 
 	// UN-comment the one below for local dev
-	// wp_enqueue_style( 'main-style', get_template_directory_uri() . '/css/style.css', [], time(), 'all' );
+	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/css/style.css', [], time(), 'all' );
 
+	/* GOOGLE FONTS */
+	wp_register_style('googleFonts', '//fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Roboto:ital,wght@0,400;0,700;1,500&display=swap', array(), null);
+	wp_enqueue_style('googleFonts');
+
+	/* FONT AWESOME (not working) */
+	// wp_register_style( 'load-fa', '//use.fontawesome.com/releases/v5.6.3/css/all.css' );
+	// wp_enqueue_style( 'load-fa', '//use.fontawesome.com/releases/v5.5.0/css/all.css' );
+	wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css' );
+	wp_enqueue_style('load-fa');
+
+}
+add_action( 'wp_enqueue_scripts', 'tower_styles' );
+
+function tower_scripts() {
+
+	/* THEME JAVASCRIPT FILES */
 	wp_enqueue_script( 'tower-customizer', get_template_directory_uri() . '/js/customizer.js', array(), TOWER_VERSION, true );
 	wp_enqueue_script( 'tower-menutoggle', get_template_directory_uri() . '/js/menutoggle.js', array(), TOWER_VERSION, true );
 	wp_enqueue_script( 'tower-backtotop', get_template_directory_uri() . '/js/backtotop.js', array(), TOWER_VERSION, true );

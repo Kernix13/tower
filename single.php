@@ -5,7 +5,7 @@
  * @package Tower
  */
 
-get_header( 'post' );
+get_header( 'blog-page' );
 ?>
 
 	<main id="primary" class="site-main">

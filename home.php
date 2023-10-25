@@ -4,15 +4,13 @@
  * @package Tower
  */
 
-get_header( 'post');
+get_header( 'blog-page');
 ?>
 
 	<main id="primary" class="site-main">
 		<div class="container">
 		<span class="breadcrumb"><?php get_breadcrumb(); ?></span>
-			<h1 class="page-title">
-				<?php wp_title( '' ); ?>
-			</h1>
+			<!-- wp_title('') was here  -->
 			
 		</div>
 		<div class="container sidebar-page">
@@ -20,14 +18,6 @@ get_header( 'post');
 				
 				<?php
 				if ( have_posts() ) :
-					// the line below won't work if home.php doesn't exist
-					if ( is_home() && ! is_front_page() ) :
-						?>
-						<header>
-							<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-						</header>
-						<?php
-					endif; 
 					
 					/* Start the Loop */
 					while ( have_posts() ) :

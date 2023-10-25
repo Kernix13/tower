@@ -1,53 +1,68 @@
-# Tower Custom WordPress Theme
+[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
-This is the theme I built for my website Kernix Web Design (no longer active). I will update this readme file later. I would not recommend downloaded and then uploading this theme for your website unless you know CSS. I have the theme header and footr colors hardcoded in the main CSS file.
+# \_s
 
-## Important Notes
+Basic lightweight theme geared towards speed and security..
 
-I removed files that were part of the Underscores download but are not required for my theme to run. They are throwing errors in my GitHub repo because of the dependencies. Here is what I removed
+My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
 
-- `.eslintrc`: extends `plugin:@wordpress/eslint-plugin/esnext`
-- `.stylelintrc.json`: not worth covering the few things in this file
-- `composer.json`: I may need this back becuse I used a command to create the `style-rtl.css` file.
-- `composer.phar`: empty file. I think this was created when I ran `git init` and I had `package.json`.
-- `package.json` and `package.lock.json`: not using node modules
+- A modern workflow with a pre-made command-line interface to turn your project into a more pleasant experience.
+- A just right amount of lean, well-commented, modern, HTML5 templates.
+- A custom header implementation in `inc/custom-header.php`. Just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
+- Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
+- Some small tweaks in `inc/template-functions.php` that can improve your theming experience.
+- A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
+- 2 sample layouts in `sass/layouts/` made using CSS Grid for a sidebar on either side of your content. Just uncomment the layout of your choice in `sass/style.scss`.
+  Note: `.no-sidebar` styles are automatically loaded.
+- Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
+- Full support for `WooCommerce plugin` integration with hooks in `inc/woocommerce.php`, styling override woocommerce.css with product gallery features (zoom, swipe, lightbox) enabled.
+- Licensed under GPLv2 or later. :) Use it to make something cool.
 
-Check out the notes on `composer` at the bottom of `README_S.md` on composer. I may need to install composer as I make changes to my styles so that they are reflected in `style-rtl.css`.
+## Installation
 
-You can also check the [Underscores repo](https://github.com/Automattic/underscores.me) to see their files, or download a version from [their website](https://underscores.me/) to get a copy of those files.
+### Requirements
 
-I added back the following files:
+`_s` requires the following dependencies:
 
-- `LICENSE`: I assume this is important to have but it's legal babble to me.
-- `phpcs.xml.dist`: I have no idea how to use this file. Added it to `.gitignore` but it wasn't ignored so I had to remove it.
+- [Node.js](https://nodejs.org/)
+- [Composer](https://getcomposer.org/)
 
-## Template Files
+### Quick Start
 
-Notes on the various files:
+Clone or download this repository, change its name to something else (like, say, `megatherium-is-awesome`), and then you'll need to do a six-step find and replace on the name in all the templates.
 
-1. **`date.php`**: I included it but I have no intention of added links to the dates for my blog posts. It's not a blog based site and I will not be writing a ton of articles.
-1. **`comments.php`**: Same as for date.php - I will not have comments enabled for any of my posts so no need to actually call it.
+1. Search for `'_s'` (inside single quotations) to capture the text domain and replace with: `'megatherium-is-awesome'`.
+2. Search for `_s_` to capture all the functions names and replace with: `megatherium_is_awesome_`.
+3. Search for `Text Domain: _s` in `style.css` and replace with: `Text Domain: megatherium-is-awesome`.
+4. Search for <code>&nbsp;\_s</code> (with a space before it) to capture DocBlocks and replace with: <code>&nbsp;Megatherium_is_Awesome</code>.
+5. Search for `_s-` to capture prefixed handles and replace with: `megatherium-is-awesome-`.
+6. Search for `_S_` (in uppercase) to capture constants and replace with: `MEGATHERIUM_IS_AWESOME_`.
 
-### Template files for child themes
+Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
 
-These are the templates that would be ideal for customization:
+### Setup
 
-1. `author.php`:
-1. `category.php`:
-1. `template-full-width.php`:
+To start using all the tools that come with `_s` you need to install the necessary Node.js and Composer dependencies :
 
-## Template-Parts Files
+```sh
+$ composer install
+$ npm install
+```
 
-Pertinent notes here
+### Available CLI commands
 
-## CSS Folder Files
+`_s` comes packed with CLI commands tailored for WordPress theme development :
 
-Pertinent notes here
+- `composer lint:wpcs` : checks all PHP files against [PHP Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/).
+- `composer lint:php` : checks all PHP files for syntax errors.
+- `composer make-pot` : generates a .pot file in the `languages/` directory.
+- `npm run compile:css` : compiles SASS files to css.
+- `npm run compile:rtl` : generates an RTL stylesheet.
+- `npm run watch` : watches all SASS files and recompiles them to css when they change.
+- `npm run lint:scss` : checks all SASS files against [CSS Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/css/).
+- `npm run lint:js` : checks all JavaScript files against [JavaScript Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/javascript/).
+- `npm run bundle` : generates a .zip archive for distribution, excluding development and system files.
 
-## INC Folder Files
+Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
 
-Pertinent notes here
-
-## JS Folder Files
-
-Pertinent notes here
+Good luck!

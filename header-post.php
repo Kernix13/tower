@@ -2,7 +2,7 @@
 /**
  * The header for our theme
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
+ * This is the template that ...
  * 
  * @package Tower
  */
@@ -20,7 +20,6 @@
 
 <body <?php body_class(); ?>>
 <button id="back-to-top-btn">&#8679;</button>
-<!-- <div class="full-page"> -->
 	<?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'tower' ); ?></a>

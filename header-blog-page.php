@@ -24,8 +24,8 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'tower' ); ?></a>
 
-	<div class="home-header">
-		<header id="masthead" class="home-site-header">
+	<div class="page-header">
+		<header id="masthead" class="page-site-header">
 			<div class="container header-row">
 				<button class="nav-toggle" aria-label="open navigation">
 					<span class="hamburger"></span>
@@ -54,7 +54,7 @@
 				<div class="site-branding">
 					<div class="site-brand">
 						<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-						<h3 class="site-description"><?php bloginfo( 'description' ); ?></h3>
+						<h3 class="site-description"><?php esc_html_e( 'Web Design and Development Articles', 'tower' ); ?></h3>
 					</div>
 				</div><!-- .site-branding -->
 			</div><!-- .container .header-row -->

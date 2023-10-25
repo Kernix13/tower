@@ -4,15 +4,13 @@
  * @package Tower
  */
 
-get_header( 'post');
+get_header( 'custom');
 ?>
 
 	<main id="primary" class="site-main">
 		<div class="container">
 		<span class="breadcrumb"><?php get_breadcrumb(); ?></span>
-			<h1 class="page-title">
-				<?php wp_title( '' ); ?>
-			</h1>
+				<!-- wp_title('') in an h1 was here  -->
 		</div>
 		<div class="container sidebar-page">
 			<article class="blog-page">
