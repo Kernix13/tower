@@ -1649,7 +1649,8 @@ span.inline {
 .entry-footer {
   font-family: 'Courier New', Courier, 'Lucida Console', Consolas, Monaco, 'Lucida Sans Typewriter', monospace;
   font-size: 0.9rem;
-  color: #666;
+  font-weight: 600;
+  color: #555;
 }
 
 .entry-meta a,
