@@ -52,24 +52,6 @@ body {
   color: #333;
 }
 
-.test-bg {
-  height: 75vh;
-  /* kbd-bg2 or kbd-bg3 */
-  background-image: url("./img/kbd-bg1.jpg");
-  background-repeat: no-repeat;
-}
-
-.test-bg::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 75vh;
-  background-color: rgba(0, 0, 0, 0.75);
-}
-
 /* FONT AWESOME */
 .fa-brands,
 .fa-solid,
@@ -152,18 +134,7 @@ body {
 .blockquote p::after {
   content: '\201D';
 }
-
-.testimonial-h3 {
-  font-size: 1rem;
-  font-weight: 500;
-  text-align: center;
-  margin-top: 0;
-}
-
-.testimonial-site {
-  font-size: 87.5%;
-  letter-spacing: 0.125rem;
-}
+/* END TESTIMONIALS */
 
 ::selection {
   background-color: #304892;
@@ -224,6 +195,20 @@ p {
 
 p.indent {
   padding-left: 2.5em;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: var(--link-clr);
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: var(--link-hover-clr2);
+  transition: color 0.25s linear;
+  text-decoration: underline;
 }
 
 li {
@@ -307,7 +292,6 @@ address {
   max-width: 100%;
   height: auto;
 }
-
 /* END content_width styles */
 
 span.highlight,
@@ -317,33 +301,6 @@ div.highlight {
   padding-bottom: 0.5em;
 }
 
-span.text-bold {
-  font-weight: bold;
-}
-
-span.text-italic {
-  font-style: italic;
-}
-
-span.text-underlined {
-  text-decoration: underline;
-}
-
-a {
-  text-decoration: none;
-  outline: none;
-  color: var(--link-clr);
-}
-
-a:hover,
-a:focus,
-a:active {
-  color: var(--link-hover-clr2);
-  transition: color 0.25s linear;
-  text-decoration: underline;
-}
-
-/* breadcrumbs */
 span.breadcrumb {
   display: block;
   text-align: right;
@@ -351,8 +308,6 @@ span.breadcrumb {
   font-size: 0.9rem;
   color: #888;
 }
-
-/* end breadcrumbs */
 
 .site-main {
   background-color: var(--content-bg-clr);
@@ -363,14 +318,8 @@ span.breadcrumb {
   margin: 0;
 }
 
-/* WHAT IS THIS? */
 .front-content br {
   display: none;
-}
-
-.tooltip {
-  text-align: left;
-  white-space: pre-wrap;
 }
 
 /* =========== FROM _S UNDERSCORES =============== */
@@ -524,9 +473,6 @@ code {
   line-height: 1.5;
   padding: 0.1875em 0.25em 0.0625em;
   border-radius: 0.3em;
-  // tab-size: 4;
-  // text-align: left;
-  // box-shadow: black 1px 1px 0.3em -0.1em inset;
 }
 
 p>code {
@@ -571,9 +517,6 @@ kbd {
   padding-top: 1.5em;
   line-height: 1.5;
   overflow: auto;
-  // overflow: scroll;
-  // overflow-x: auto;
-  // white-space: pre-wrap;
 }
 
 /* DARK code block */
@@ -660,12 +603,14 @@ figure {
   margin: 1em 0;
 }
 
-/* figcaption {
+/* 
+figcaption {
   font-style: italic;
   font-size: 0.9rem;
   color: #666;
   margin-top: 0.5em;
-} */
+} 
+*/
 
 .wp-caption {
   color: #666;
@@ -687,9 +632,9 @@ figure {
 }
 
 /* Make sure logo link wraps around logo image. */
-/* .custom-logo-link {
-  display: inline-block;
-} */
+// .custom-logo-link {
+//   display: inline-block;
+// }
 
 /* Galleries
 --------------------------------------------- */
@@ -740,89 +685,6 @@ figure {
 .gallery-caption {
   display: block;
 }
-
-/* Comments
---------------------------------------------- */
-.comments-area {
-  width: 93%;
-  margin: 2em auto;
-}
-
-.comments-area:before {
-  display: block;
-  content: '';
-  outline: 1px solid #ccc;
-}
-
-.comments-title {
-  display: block;
-  padding-top: 1em;
-}
-
-.comment-content a {
-  word-wrap: break-word;
-}
-
-.comment-author {
-  display: inline;
-}
-
-.comment-meta {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.comment-list {
-  margin-bottom: 2em;
-}
-
-.comment-body {
-  padding: 1em;
-  margin: 1em 0;
-  /* border: 1px solid gray; */
-}
-
-.comment-body {
-  border: 1px solid #ccc;
-  background-color: #eee;
-  background-color: #fff;
-  border-radius: 0.5em;
-}
-
-.form-submit>.submit {
-  background-color: rgb(0, 26, 255);
-  color: #fff;
-  padding: 0.5em 1em;
-}
-
-.form-submit>.submit:hover {
-  /* background-color: #fff;
-  color: rgb(0, 26, 255); */
-  cursor: pointer;
-  opacity: 75%;
-}
-
-.avatar {
-  margin: 1em 0;
-}
-
-.comment-metadata a:not(.comment-edit-link) {
-  pointer-events: none;
-  text-decoration: none;
-  color: #333;
-}
-
-.bypostauthor {
-  display: block;
-}
-
-.comment-navigation {
-  margin: 0 0 1.5em;
-  display: flex;
-  flex: 1 0 50%;
-  text-align: end;
-}
-
 /* =========== END UNDERSCORES =============== */
 
 /* =========== CONTAINER-CSS =============== */
@@ -854,7 +716,6 @@ figure {
 }
 
 .content-container2 {
-  // width: 93%;
   margin: 0 auto;
   padding: 2em;
   background-color: #f1f5f9;
@@ -941,6 +802,7 @@ hr.resume {
 
 .container {
   /* added for nav-toggle positioning */
+  /* Huh? Why? */
   position: relative;
 }
 
@@ -1069,8 +931,6 @@ hr.resume {
   text-align: center;
 }
 
-/* =========== END GENERAL-CSS =============== */
-
 /* =========== HEADER-CSS =============== */
 /* Text meant only for screen readers. */
 .screen-reader-text {
@@ -1084,6 +944,15 @@ hr.resume {
   position: absolute !important;
   width: 1px;
   word-wrap: normal !important;
+
+  position: absolute;
+  background: white;
+  color: white;
+  left: 50%;
+  padding: 0.5em;
+  height: 1.875em;
+  transform: translateY(-100%);
+  transition: transform 300ms;
 }
 
 .screen-reader-text:focus {
@@ -1097,40 +966,31 @@ hr.resume {
   font-size: 0.875rem;
   font-weight: 700;
   height: auto;
-  left: 5px;
+  // left: 5px;
   line-height: normal;
   padding: 15px 23px 14px;
   text-decoration: none;
-  top: 5px;
+  // top: 5px;
   width: auto;
   z-index: 100000;
-}
 
-.home-header {
-  background-image: url("https://kernixwebdesign.com/wp-content/uploads/2023/10/kbd-bg3.jpg");
-}
-.page-header {
-  background-image: url("https://kernixwebdesign.com/wp-content/uploads/2023/10/kbd-bg3.jpg");
-  // background-image: url("http://kwd.luna/wp-content/uploads/2023/10/kbd-bg1.jpg");
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
 }
 
 .home-header, .page-header {
-  color: #ccc;
-  height: 60vh;
-  background-repeat: no-repeat;
-  background-position: top;
-  text-align: center;
-}
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(26, 26, 26, 0.65)),
+      url('https://kernixwebdesign.com/wp-content/uploads/2023/10/kbd-bg3.jpg');
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-.home-header::before, .page-header::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(60vh + 3em);
-  background-color: rgba(0, 0, 0, 0.75);
+    color: #ccc;
+    text-align: center;
+    padding: 0 0 1.5em;
 }
 
 .site-header {
@@ -1139,17 +999,16 @@ hr.resume {
   padding: 1em 0;
   text-align: left;
 }
-.home-site-header, .page-site-header{
+
+.home-site-header,
+.page-site-header {
   color: #ccc;
-  // background-color: rgba(37, 41, 51, 0.25);
   padding: 1em 0;
   text-align: left;
 }
 
 .site-brand-header {
   color: #ccc;
-  // background-color: #252933;
-  // padding: 1em 0;
   padding-top: 4em;
   text-align: center;
 }
@@ -1260,10 +1119,6 @@ hr.resume {
   color: var(--link-hover-clr2);
 }
 
-// .site-brand-header {
-//   padding-top: 4em;
-// }
-
 .header-row .menu>.current-menu-item>a {
   color: var(--link-hover-clr2);
   cursor: default;
@@ -1280,17 +1135,11 @@ hr.resume {
   margin: 0 auto;
 }
 
-// .site-title,
-// .site-description {
-//   color: var(--common-clr);
-//   font-weight: 500;
-// }
 .site-title,
 .page-title,
 .site-description,
 .page-description {
   color: var(--common-clr);
-  // color: #c39f76;
   font-weight: 500;
   margin: 0;
 }
@@ -1305,15 +1154,12 @@ hr.resume {
 .site-description {
   padding: 1em 0 2em;
 }
-
 /* =========== END HEADER =============== */
 
 /* =========== MAIN CSS =============== */
-
 /* FRONT-PAGE THE_CONTENT front page the content the_content */
 /* backgrounds */
 section.bgcolor1 {
-  // background-color: #f3faff;
   background-color: rgba(214, 246, 252, 0.95);
   color: #333;
   padding: 2.5em 0;
@@ -1485,10 +1331,6 @@ section.bgcolor1 {
   flex-basis: 50%;
 }
 
-// .services-list {
-//   padding-bottom: 0.25em;
-// }
-
 /* custom widget & recent posts on front page */
 .row {
   display: flex;
@@ -1535,11 +1377,6 @@ section.bgcolor1 {
 .url:hover {
   color: #000;
 }
-
-/* .single-recent-posts-link:hover,
-.single-recent-row > .byline > .url:hover {
-  color: var(--link-hover-clr);
-} */
 
 .single-recent-row>.posted-on,
 .single-recent-row>.byline {
@@ -1616,9 +1453,6 @@ section.bgcolor1 {
 
 .custom-widget ul li {
   border: 1px solid black;
-
-  /* flex-basis: 33%;
-  width: 33%; */
   padding: 1em;
 }
 
@@ -1836,7 +1670,6 @@ span.inline {
   font-size: 1.1rem;
   box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.4);
 }
-
 /* END BLOG POSTS */
 
 /* =========== TITLES & STYLED PARAGRAPHS-CSS =============== */
@@ -1921,8 +1754,8 @@ span.inline {
 .services-col {
   margin-bottom: 2em;
   background: linear-gradient(rgba(185, 245, 255, 0.9),
-        rgba(214, 246, 252, 0.9),
-        rgba(255, 255, 255, 0.9));
+      rgba(214, 246, 252, 0.9),
+      rgba(255, 255, 255, 0.9));
 }
 
 
@@ -1936,7 +1769,6 @@ span.inline {
 
 .common-text-box,
 .services-points {
-  // background-color: rgba(255, 255, 255, 0.9);
 
   margin: 1em 0;
   padding: 1em;
@@ -1945,8 +1777,6 @@ span.inline {
 }
 
 .service-card-list {
-  // list-style: none;
-  // background-color: rgba(255, 255, 255, 0.9);
   text-align: left;
   padding-top: 0.5em;
   margin: 0;
@@ -2159,7 +1989,6 @@ span.inline {
 .site-info a:hover {
   color: var(--footer-clr2);
 }
-
 /* =========== END FOOTER =============== */
 
 /* BACK TO TOP BUTTON backtotop.js*/
@@ -2231,26 +2060,11 @@ span.inline {
 }
 
 /* ======== MEDIA QUERIES ====== */
-// @media (min-width: 480px) {
-//   #back-to-top-btn {
-//     font-size: 1.5rem;
-//     width: 50px;
-//     height: 50px;
-//     bottom: 20px;
-//     right: 20px;
-//   }
-// }
-
 @media (min-width: 768px) {
 
-  .home-header::before,
-  .page-header::before {
-    height: calc(60vh + 2em);
+  .site-brand-header {
+    padding-top: 0;
   }
-
-  // .site-brand-header {
-  //   padding-top: 0;
-  // }
 
   .widget h3 {
     margin: 0 0 1em;
@@ -2274,8 +2088,6 @@ span.inline {
     justify-content: space-between;
     padding-bottom: 1em;
     align-items: center;
-    /* below is from nav-challenge */
-    /* -webkit-box-pack: justify; */
   }
 
   .nav-toggle,
@@ -2306,7 +2118,6 @@ span.inline {
     list-style: none;
     margin: 0;
     padding: 0;
-    /* margin-bottom: 1.5em; */
   }
 
   .nav .menu .menu-item-has-children {
@@ -2364,7 +2175,6 @@ span.inline {
   }
 
   .header-row .menu>.current-menu-item>a {
-    // color: var(--link-hover-clr2);
     color: var(--link-hover-clr2);
     font-weight: normal;
   }
@@ -2550,7 +2360,6 @@ span.inline {
     margin: 0 auto;
     /* width: 33%; */
     text-align: center;
-    /* padding: 1em; */
   }
 
   .about-footer,
@@ -2679,12 +2488,6 @@ span.inline {
     padding-bottom: 2em;
   }
 
-  // .contact-flex {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: flex-start;
-  // }
-
   .other-services {
     flex-basis: 48%;
   }
@@ -2750,16 +2553,6 @@ span.inline {
 }
 
 /* ===== CONTACT FORM 7 STYLES */
-/* 
-.contact-page-name, 
-.contact-page-biz,
-.contact-page-email, 
-.contact-page-tel, 
-.contact-page-svc, 
-.contact-page-hear, 
-.contact-page-subject,
-.contact-page-textarea
-*/
 form label {
   margin-bottom: 0.25em;
   vertical-align: baseline;

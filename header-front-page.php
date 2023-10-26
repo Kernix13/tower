@@ -22,7 +22,7 @@
 <button id="back-to-top-btn">&#8679;</button>
 	<?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'tower' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to main content', 'tower' ); ?></a>
 
 	<div class="home-header">
 		<header id="masthead" class="home-site-header">

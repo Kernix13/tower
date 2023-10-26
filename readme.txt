@@ -41,8 +41,6 @@ GNU General Public License for more details.
 
 = Does this theme support any plugins? =
 
-Tower includes support for WooCommerce.
-
 == Changelog ==
 
 = 1.0 - Dec 20 2020 =

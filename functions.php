@@ -175,7 +175,6 @@ function tower_styles() {
 	// comment OUT the one below for local dev -> used for live site
 	// wp_enqueue_style( 'tower-style', get_template_directory_uri() . '/css/style.css', array(), TOWER_VERSION );
 	wp_style_add_data( 'tower-style', 'rtl', 'replace' );
-	wp_enqueue_style( 'tower-style', get_template_directory_uri() . 'woocommerce.css', array(), TOWER_VERSION );
 
 	// UN-comment the one below for local dev
 	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/css/style.css', [], time(), 'all' );
@@ -253,16 +252,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 /**
- * Load WooCommerce compatibility file.
+ * Set Excerpt Length
  */
-if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/woocommerce.php';
+function tower_set_excerpt_length(){
+	return 50;
 }
-
-	// Excerpt Length
-	function tower_set_excerpt_length(){
-		return 50;
-	}
 	
 	add_filter('excerpt_length', 'tower_set_excerpt_length');
 
