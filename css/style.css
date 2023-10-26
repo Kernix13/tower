@@ -1439,7 +1439,8 @@ section.bgcolor1 {
   display: inline-block;
   font-family: 'Courier New', Courier, 'Lucida Console', Consolas, Monaco, 'Lucida Sans Typewriter', monospace;
   font-size: 90%;
-  color: #666;
+  font-weight: 600;
+  color: #555;
   margin: 0;
   padding-bottom: 0.75em;
 }
@@ -1451,7 +1452,8 @@ section.bgcolor1 {
   display: inline-block;
   font-family: 'Courier New', Courier, 'Lucida Console', Consolas, Monaco, 'Lucida Sans Typewriter', monospace;
   font-size: 95%;
-  color: #666;
+  font-weight: 600;
+  color: #555;
   margin-top: 0;
 }
 
