@@ -1,5 +1,33 @@
 @charset "UTF-8";
+/*
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Roboto:ital,wght@0,400;0,700;1,500&display=swap');
+*/
+
+@font-face {
+  font-family: "Lora";
+  src: url("../fonts/Lora-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto Italic";
+  src: url("../fonts/Roboto-MediumItalic.ttf");
+}
+/* FONT AWESOME */
+@font-face {
+  font-family: "fa-brands";
+  src: url("../fonts/fa-brands-400.ttf");
+}
+@font-face {
+  font-family: "fa-regular";
+  src: url("../fonts/fa-regular-400.ttf");
+}
+@font-face {
+  font-family: 'fa-solid';
+  src: url("../fonts/fa-solid-900.ttf");
+}
 
 
 :root {
@@ -65,15 +93,19 @@ body {
 }
 
 .fa-image {
-  color: rgb(147, 13, 225);
+  color: rgb(139, 0, 220);
 }
 
 .fa-compass-drafting {
-  color: orange;
+  color: rgb(255, 140, 0);
 }
 
 .fa-gauge {
-  color: green;
+  color: rgb(0, 113, 0);
+}
+
+.fa-angle-up {
+  color: #fff;
 }
 
 /* TESTIMONIALS */
@@ -116,7 +148,12 @@ body {
 }
 
 .blockquote p {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Italic", Verdana,
+    'Trebuchet MS',
+    Tahoma,
+    Helvetica,
+    Arial,
+    sans-serif;
   padding: 1.063em 1.063em 0;
   line-height: 1.7;
   border-radius: 5px;
@@ -223,6 +260,12 @@ blockquote {
   margin: 0 1.5em;
   padding: 0 1em;
   border-left: 5px solid rgba(37, 41, 51, 0.25);
+  font-family: "Roboto Italic", Verdana,
+      'Trebuchet MS',
+      Tahoma,
+      Helvetica,
+      Arial,
+      sans-serif;
   font-style: italic;
 }
 
@@ -453,6 +496,12 @@ cite,
 em,
 i {
   font-style: italic;
+  font-family: "Roboto Italic", Verdana,
+    'Trebuchet MS',
+    Tahoma,
+    Helvetica,
+    Arial,
+    sans-serif;
 }
 
 address {
@@ -616,6 +665,12 @@ figcaption {
   color: #666;
   font-size: 0.9rem;
   font-style: italic;
+  font-family: "Roboto Italic", Verdana,
+      'Trebuchet MS',
+      Tahoma,
+      Helvetica,
+      Arial,
+      sans-serif;
   margin-bottom: 1.5em;
   max-width: 100%;
 }
@@ -1364,6 +1419,7 @@ section.bgcolor1 {
   margin: 0 auto;
   /* double-check that these are okay */
   width: 75%;
+  aspect-ratio: 3/2;
 }
 
 .recent-row h4 {

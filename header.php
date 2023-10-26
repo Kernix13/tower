@@ -19,7 +19,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<button id="back-to-top-btn">&#8679;</button>
+<button id="back-to-top-btn"><i class="fa-solid fa-angle-up"></i></button>
 	<?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to main content', 'tower' ); ?></a>
