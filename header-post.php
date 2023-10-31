@@ -2,7 +2,8 @@
 /**
  * The header for our theme
  *
- * This is the template that ...
+ * This header and header.php are bad - they were not updated
+ * but they are not currently being used for any template file
  * 
  * @package Tower
  */
@@ -34,15 +35,15 @@
 			</div>		
 			<nav id="site-navigation" class="main-navigation nav">
 				
-					<?php
+				<?php
 					wp_nav_menu(
-					array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-					'container'			 => '',
-					)
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+							'container'			 => '',
+						)
 					);
-					?>
+				?>
 			</nav><!-- #site-navigation -->
 
 

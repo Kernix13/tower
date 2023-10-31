@@ -1,12 +1,27 @@
 /**
- * File menutoggle.js.
- *
+ * MOBILE HAMBURGER MENU
  */
 
-const navToggle = document.querySelector('.nav-toggle');
-const nav = document.querySelector('.nav');
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.header-menu');
 
+hamburger.addEventListener('click', () => {
+  /* Toggle active class */
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('active');
 
-navToggle.addEventListener('click', () => {
-    nav.classList.toggle('nav--visible');
-})
+  /* Toggle aria-expanded value */
+  let menuOpen = navMenu.classList.contains('active');
+  console.log(menuOpen);
+  let newMenuOpenStatus = menuOpen;
+  hamburger.setAttribute('aria-expanded', newMenuOpenStatus);
+});
+
+// close mobile menu
+document.querySelectorAll('.nav-link').forEach(n =>
+  n.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+    // Need to add Toggle aria-expanded value here as well because it stays as true when you click a menu item
+  })
+);

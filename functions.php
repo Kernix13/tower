@@ -270,7 +270,6 @@ function tower_set_excerpt_length(){
 function tower_excerpt_more( $more ) {
 	return ' . . .';
 }
-
 add_filter( 'excerpt_more', 'tower_excerpt_more' );
 
 // Stop WP adding extra <p> </p> to your pages' content

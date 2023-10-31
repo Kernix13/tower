@@ -1,8 +1,9 @@
 <?php
 /**
- * The header for our theme
+ * The header for home.php
  *
- * This removes the link to the home page in the header
+ * This is the first header file and there are too many
+ * I need a conditional for all of them
  *
  * @package Tower
  */
@@ -26,24 +27,31 @@
 
 	<div class="page-header">
 		<header id="masthead" class="page-site-header">
-			<div class="container header-row">
-				<button class="nav-toggle" aria-label="open navigation">
-					<span class="hamburger"></span>
-				</button>
-				<div class="logo">
-					<?php the_custom_logo(); ?>
-				</div>		
+			<div class="container header_row">
+		
 				<nav id="site-navigation" class="main-navigation nav">
 					
-						<?php
+					<div class="logo">
+						<?php the_custom_logo(); ?>
+					</div>
+
+					<button id="hamburger" class="hamburger" aria-label="open navigation" tabindex="0" aria-expanded="false">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</button>
+
+					<?php
 						wp_nav_menu(
-						array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-						'container'			 => '',
-						)
+							array(
+								'menu_class'		 => 'header-menu',
+								'theme_location' => 'menu-1',
+								'menu_id'        => 'primary-menu',
+								'container'			 => '',
+							)
 						);
-						?>
+					?>
+
 				</nav><!-- #site-navigation -->
 
 
