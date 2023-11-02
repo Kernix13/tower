@@ -1167,13 +1167,14 @@ hr.resume {
 
 /* End New */
 
-#primary-menu .current-menu-item > a {
+#primary-menu .current-menu-item > a, #menu-footer-nav .current-menu-item > a {
   color: var(--link-hover-clr2);
   cursor: default;
   font-weight: bold;
 }
 
-#primary-menu .header-menu > .current-menu-item > a:after {
+#primary-menu .header-menu > .current-menu-item > a:after,
+#menu-footer-nav .header-menu>.current-menu-item>a:after {
   background-color: transparent;
 }
 
@@ -2128,11 +2129,6 @@ span.inline {
   .employment-gap {
     width: 90%;
     max-width: 1100px;
-  }
-
-  .home-site-header .container {
-    width: 90%;
-    max-width: 1032px;
   }
 
   .site-brand-header {

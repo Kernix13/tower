@@ -20,7 +20,7 @@ get_header( 'custom');
 				<div class="header-404">
 					<div class="content-container single-col-content">
 						<h2 class="contact-title-404"><?php esc_html_e( '404: Page Not Found!', 'tower' ); ?></h2>
-						<p><?php esc_html_e( 'The page you are searching for does not exist. Let us know if a link got you here and we will fix the link. But however you got here, try the links at the top of the page or in the footer at the bottom.', 'tower' ); ?></p>
+						<p><?php esc_html_e( 'The page you are searching for does not exist. Let us know if a link got you here and we will fix the link. But however you got here, click one of the links at the top or bottom of the page or try the big HOME button below this paragraph.', 'tower' ); ?></p>
 						
 						<a class="btn btn--home" href="https://kernixwebdesign.com/">HOME</a>
 					</div>

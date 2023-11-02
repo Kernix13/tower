@@ -2,7 +2,8 @@
 /**
  * The header for our theme
  *
- * ADD TEXT HERE... 
+ * This is not so much a custom header but a catch-all header. 
+ * I 
  *
  * @package Tower
  */
@@ -59,9 +60,36 @@
 			<div class="container header-row">
 				<div class="site-branding">
 					<div class="site-brand">
-						<h1 class="page-title">
-							<?php wp_title( '' ); ?>
-						</h1>
+						<?php
+						if (is_front_page()) {
+							?>
+								<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+								<h3 class="site-description"><?php bloginfo( 'description' ); ?></h3>
+							<?php
+						} elseif (is_home() || is_single()) {
+							?>
+								<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+								<h3 class="site-description"><?php esc_html_e( 'Web Design and Development Articles', 'tower' ); ?></h3>
+							<?php
+						} elseif (is_page()) {
+							?>
+								<h1 class="page-title"><?php the_title(); ?></h1>
+								<h3 class="page-description"><?php the_excerpt(); ?></h3>
+							<?php
+						} elseif (is_404() || is_archive() || is_author() || is_category()) {
+							?>
+								<h1 class="page-title">
+									<?php wp_title( '' ); ?>
+								</h1>
+							<?php
+						} else {
+							while(have_posts()) {
+								the_post(); ?>
+								<h1 class="page-title"><?php the_title(); ?></h1>
+								<h3 class="page-description"><?php the_excerpt(); ?></h3>
+							<?php }
+						}
+						?>
 					</div>
 				</div><!-- .site-branding -->
 			</div><!-- .container .header-row -->

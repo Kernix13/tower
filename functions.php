@@ -183,9 +183,6 @@ function tower_styles() {
 	wp_register_style( 'load-fa-all', '//use.fontawesome.com/releases/v6.4.2/css/all.css' );
 	wp_enqueue_style('load-fa-all');
 
-	wp_register_style( 'load-fa-shim', '//use.fontawesome.com/releases/v6.4.2/css/v4-shims.css' );
-	wp_enqueue_style('load-fa-shim');
-
 	/* GOOGLE FONTS */
 	/* Using @font-face and loading the fonts instead */
 
@@ -362,6 +359,18 @@ function tower_google_print_scripts() {
 	
 }
 add_action('wp_print_scripts', 'tower_google_print_scripts');
+
+// inline Font Awesome script via wp_print_scripts
+function tower_fa_print_scripts() { 
+	
+	?>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+	<?php
+	
+}
+// add_action('wp_print_scripts', 'tower_fa_print_scripts');
 
 // to hide max-image-preview:large directive to the robots meta tag
 // remove_filter('wp_robots', 'wp_robots_max_image_preview_large');

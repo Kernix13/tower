@@ -2,8 +2,8 @@
 /**
  * The header for our theme
  *
- * This header and header.php are bad - they were not updated
- * but they are not currently being used for any template file
+ * This header was not updated and is not being used for any template file.
+ * I am keeping it for now...
  * 
  * @package Tower
  */

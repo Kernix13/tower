@@ -5,7 +5,7 @@
  * @package Tower
  */
 
-get_header( 'front-page' );
+get_header( 'custom');
 ?>
 
 	

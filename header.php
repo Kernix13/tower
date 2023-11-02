@@ -24,46 +24,52 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to main content', 'tower' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="container header-row">
-			<button class="nav-toggle" aria-label="open navigation" type="button">
-				<span class="hamburger"></span>
-			</button>
-			<div class="logo">
-				<?php the_custom_logo(); ?>
-			</div>		
-			<nav id="site-navigation" class="main-navigation nav">
-				
+	<div class="page-header">
+		<header id="masthead" class="page-site-header">
+			<div class="container header_row">
+	
+				<nav id="site-navigation" class="main-navigation nav">
+
+					<div class="logo">
+						<?php the_custom_logo(); ?>
+					</div>
+
+					<button id="hamburger" class="hamburger" aria-label="open navigation" tabindex="0" aria-expanded="false">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</button>
+					
 					<?php
 						wp_nav_menu(
-						array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-							'container'			 => '',
-						)
+							array(
+								'menu_class'		 => 'header-menu',
+								'theme_location' => 'menu-1',
+								'menu_id'        => 'primary-menu',
+								'container'			 => '',
+							)
 						);
 					?>
-			</nav><!-- #site-navigation -->
+				</nav><!-- #site-navigation -->
 
 
-		</div><!-- .container -->
-	</header><!-- #masthead -->
-	<div class="site-brand-header">
-		<div class="container header-row">
-			<div class="site-branding">
-				<div class="site-brand">
-
-					<?php  
-						while(have_posts()) {
-							the_post(); ?>
-							<h1 class="page-title"><?php the_title(); ?></h1>
-							<h3 class="page-description"><?php the_excerpt(); ?></h3>
-					<?php }
-					?>
-
-				</div>
-			</div><!-- .site-branding -->
-		</div><!-- .container .header-row -->
+			</div><!-- .container -->
+		</header><!-- #masthead -->
+		<div class="site-brand-header">
+			<div class="container header-row">
+				<div class="site-branding">
+					<div class="site-brand">
+						<?php
+							while(have_posts()) {
+								the_post(); ?>
+								<h1 class="page-title"><?php the_title(); ?></h1>
+								<h3 class="page-description"><?php the_excerpt(); ?></h3>
+							<?php }
+						?>
+					</div>
+				</div><!-- .site-branding -->
+			</div><!-- .container .header-row -->
+		</div>
 	</div>
 
 
