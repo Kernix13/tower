@@ -1,6 +1,7 @@
 <?php
 /**
  * The template for displaying search results pages
+ * I need to fix this even though I do not have search functionality
  *
  * @package Tower
  */
