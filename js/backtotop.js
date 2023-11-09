@@ -1,9 +1,12 @@
+/** @type {HTMLElement} */
 const backToTopButton = document.querySelector("#back-to-top-btn");
 
 window.addEventListener("scroll", scrollFunction);
 
 /**
- * Display or hide back-to-top btn based on scrollY
+ * @description - Display or hide back-to-top btn based on scrollY
+ * 
+ * @function scrollFunction
  */
 function scrollFunction() {
   if (window.scrollY > 300) {
@@ -29,24 +32,33 @@ function scrollFunction() {
 backToTopButton.addEventListener("click", smoothScrollBackToTop);
 
 /**
- * Control scroll animation
+ * @description - Control scroll animation
+ * 
+ * @function smoothScrollBackToTop
  */
 function smoothScrollBackToTop() {
+  /** @type {number} */
   const duration = 1250;
+  /** @type {object} */
   let start = null;
 
+  /** @type {number} */
   const startPosition = window.scrollY;
+  /** @type {number} */
   const distanceToTop = -1 * startPosition;
 
   window.requestAnimationFrame(step);
 
   /**
-   * Synchronize animation using timestamp
-   * @param {milliseconds} timestamp 
+   * @description - Synchronize animation using timestamp
+   * 
+   * @param {date} timestamp 
+   * @function step
    */
   function step(timestamp) {
     if (!start) start = timestamp;
 
+    /** @type {date} */
     const progress = timestamp - start;
     window.scrollTo(0, easeInOutCubic(progress, startPosition, distanceToTop, duration));
 
@@ -55,14 +67,14 @@ function smoothScrollBackToTop() {
 }
 
 /**
+ * @description - Cubic-bezier function for scroll animation
  * 
- * Cubic-bezier function for scroll animation
- * 
- * @param {milliseconds} prog 
+ * @param {date} prog 
  * @param {pixels} startPos 
  * @param {pixels} dist 
- * @param {milliseconds} dur 
- * @returns 
+ * @param {date} dur 
+ * @function easeInOutCubic
+ * @returns {number}
  */
 function easeInOutCubic(prog, startPos, dist, dur) {
   prog /= dur / 2;
