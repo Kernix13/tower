@@ -197,7 +197,7 @@ function tower_scripts() {
 	wp_enqueue_script( 'tower-backtotop', get_template_directory_uri() . '/js/backtotop.js', array(), TOWER_VERSION, true );
 
 	/* GOOGLE RECAPTCHA File */
-	wp_register_script( 'tower-recaptcha', 'https://www.gstatic.com/recaptcha/releases/vm_YDiq1BiI3a8zfbIPZjtF2/recaptcha__en.js' , '', '', true );
+	wp_register_script( 'tower-recaptcha', 'https://www.gstatic.com/recaptcha/releases/moV1mTgQ6S91nuTnmll4Y9yf/recaptcha__en.js' , '', '', true );
 	wp_enqueue_script('tower-recaptcha');
 	
 }
