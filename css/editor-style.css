@@ -122,6 +122,7 @@ blockquote {
   margin: 0;
   overflow: hidden;
   padding: 0;
+  padding: 1.063em 1.063em 0;
   border-left: 2px solid #252933;
 }
 
